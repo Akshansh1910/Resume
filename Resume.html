@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/2821/2821637.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ccc;
+            flex-wrap: wrap;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 200px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .name-contact {
+            margin-left: 30px;
+        }
+
+        .name-contact h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .contact {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .contact span {
+            display: block;
+            margin: 4px 0;
+        }
+
+        .skills-section {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            position: relative;
+            width: 140px;
+            height: 140px;
+        }
+
+        svg {
+            transform: rotate(-90deg);
+        }
+
+        circle {
+            fill: none;
+            stroke-width: 12;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 2s ease-in-out;
+        }
+
+        .bg {
+            stroke: #ccc;
+        }
+
+        .progress {
+            stroke: #00aaff;
+            stroke-dasharray: 377;
+            stroke-dashoffset: 377;
+        }
+
+        .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .label {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .left-column,
+        .right-column {
+            background-color: #2e2d2d;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 48%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        h3.section-title {
+            margin-top: 0;
+            color: #00d2ff;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .left-column ul,
+        .right-column ul {
+            padding-left: 20px;
+        }
+
+        .footer {
+            background-color: rgb(49, 175, 182);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer a {
+            margin: 0 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-left">
+            <img src="my profile.png" alt="Profile Picture">
+            <div class="name-contact">
+                <h1>Akshansh Bhandari</h1>
+                <div class="contact">
+                    <span><strong>Phone:</strong> 9104633176</span>
+                    <span><strong>Email:</strong> akshanshbhandari8@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section (Top Right) -->
+        <div class="skills-section">
+            <div class="skill" data-percent="80">
+                <svg width="140" height="140">
+                    <circle class="bg" cx="70" cy="70" r="60" />
+                    <circle class="progress" cx="70" cy="70" r="60" />
+                </svg>
+                <div class="percentage">0%</div>
+                <div class="label">HTML</div>
+            </div>
+            <div class="skill" data-percent="85">
+                <svg width="140" height="140">
+                    <circle class="bg" cx="70" cy="70" r="60" />
+                    <circle class="progress" cx="70" cy="70" r="60" />
+                </svg>
+                <div class="percentage">0%</div>
+                <div class="label">CSS</div>
+            </div>
+            <div class="skill" data-percent="50">
+                <svg width="140" height="140">
+                    <circle class="bg" cx="70" cy="70" r="60" />
+                    <circle class="progress" cx="70" cy="70" r="60" />
+                </svg>
+                <div class="percentage">0%</div>
+                <div class="label">JavaScript</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="left-column">
+            <h3 class="section-title"><i class="fa-solid fa-award"></i> Education</h3>
+            <p><strong>Gyan Ganga English Medium School</strong><br>10th and 12th Passed</p>
+            <p><strong>Uka Tarsadia University</strong><br>Current Presecing Bca<br>
+
+            <h3 class="section-title"><i class="fa-solid fa-user-gear"></i> Soft Skills</h3>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Work Ethic</li>
+                <li>Teamwork</li>
+            </ul>
+
+            <h3 class="section-title"><i class="fa-solid fa-language"></i> Languages</h3>
+            <ul>
+                <li>English</li>
+                <li>Gujarati</li>
+                <li>Hindi</li>
+            </ul>
+        </div>
+
+        <div class="right-column">
+            <h3 class="section-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
+            <ul>
+                <li>C / C++</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>jQuery</li>
+            </ul>
+
+            <h3 class="section-title"><i class="fa-solid fa-computer"></i> Operating Systems</h3>
+            <ul>
+                <li>Windows</li>
+                <li>Mac</li>
+                <li>Ubuntu</li>
+                <li>Linux</li>
+            </ul>
+
+            <h3 class="section-title"><i class="fa-solid fa-certificate"></i> Certificates</h3>
+            <ul>
+                <li>C / C++</li>
+                <li>HTML</li>
+                <li>Python</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <span style="font-size: 20px;">Follow me on:</span><br><br>
+            <a href="https://www.instagram.com/akshansh_1910/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            <a href="https://www.snapchat.com/web/"><i class="fa-brands fa-snapchat fa-xl"></i></a>
+            <a href="https://www.facebook.com/akshansh.bhandre"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            <a href="https://www.linkedin.com/feed/?trk=onboarding-landing"><i class="fa-brands fa-linkedin fa-xl"></i></a><br><br>
+            <label>&copy; All Rights Reserved By: Akshansh Bhandari</label>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll(".skill").forEach(skill => {
+            let percent = skill.getAttribute("data-percent");
+            let circle = skill.querySelector(".progress");
+            let text = skill.querySelector(".percentage");
+            let offset = 377 - (377 * percent) / 100;
+
+            setTimeout(() => {
+                circle.style.strokeDashoffset = offset;
+            }, 500);
+
+            let count = 0;
+            let interval = setInterval(() => {
+                if (count >= percent) {
+                    clearInterval(interval);
+                } else {
+                    count++;
+                    text.innerText = count + "%";
+                }
+            }, 30);
+        });
+    </script>
+
+</body>
+
+</html>
